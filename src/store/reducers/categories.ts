@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import categories from '../../data/categories'
+import categories from '../../mocks/categories'
 
 const categorySlice = createSlice({
     name: 'categories',

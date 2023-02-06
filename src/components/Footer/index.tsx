@@ -7,7 +7,7 @@ const iconProps = {
 
 export const Footer = () => {
     return (
-        <div className="container mx-auto h-[150px] flex justify-between items-center">
+        <div className="container mt-auto mx-auto h-[100px] flex justify-between items-center shrink-0">
             <div className="flex items-center gap-6">
                 <FaInstagram className="cursor-pointer" {...iconProps} />
                 <FaGithub className="cursor-pointer" {...iconProps} />
