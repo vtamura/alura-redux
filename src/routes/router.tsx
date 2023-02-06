@@ -3,6 +3,7 @@ import { Categories } from '../pages/Categories'
 import { Cart } from '../pages/Cart'
 import { Home } from '../pages/Home'
 import { NotFound } from '../pages/NotFound'
+import { Advertisement } from '../pages/Advertisement'
 import { Layout } from './Layout'
 
 export const Router = () => {
@@ -16,6 +17,7 @@ export const Router = () => {
                         path="/categories/:category"
                     />
                     <Route element={<Cart />} path="/cart" />
+                    <Route element={<Advertisement />} path="/advertisement" />
                 </Route>
                 <Route element={<NotFound />} path="*" />
             </Routes>
