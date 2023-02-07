@@ -17,9 +17,16 @@ export const Item = ({
         dispatch(changeQuantity({ id: id, quantity: qtd }))
 
     return (
-        <div key={id} className="flex mb-8 shadow-md rounded-lg">
-            <img src={src} alt="" />
-            <div className="p-4">
+        <div
+            key={id}
+            className="flex flex-col sm:flex-row mb-8 sm:shadow-md sm:rounded-lg border-b-2 sm:border-b-0"
+        >
+            <img
+                src={src}
+                alt={title}
+                className="max-w-[335px] max-h-[150px]"
+            />
+            <div className="flex-1 p-4">
                 <h3 className="mb-4 font-semibold">{title}</h3>
                 <p className="text-sm text-gray-500">{description}</p>
             </div>

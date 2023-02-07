@@ -12,7 +12,7 @@ export const Hero = ({ title, description, image }: IHero) => {
 
     return (
         <div
-            className={`relative max-w-[100vw] h-1/4 shrink-0 ${
+            className={`relative max-w-[100vw] h-1/4 shrink-0 min-[1800px]:h-[35%] ${
                 image ? 'md:h-1/2' : 'md:1/3'
             } oveflow-hidden`}
         >

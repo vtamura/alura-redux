@@ -49,7 +49,7 @@ export const Home = () => {
                     ))}
                 </div>
             </div>
-            <div className="flex shrink-0 h-[50vh] my-10 pl-10 bg-[#1a1a1a]">
+            <div className="flex shrink-0 h-[50vh] min-[1800px]:h-[35%] my-10 p-4 sm:p-0 sm:pl-10 bg-[#1a1a1a]">
                 <div className="flex flex-col justify-center flex-1">
                     <h2 className="mb-2 text-gray-200 text-2xl">
                         Seja um parceiro

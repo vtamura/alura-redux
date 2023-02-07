@@ -36,8 +36,12 @@ export const Item = ({
             className="flex flex-col mb-4 sm:mb-0 sm:shadow-md sm:rounded-md overflow-hidden"
             key={id}
         >
-            <div className="w-full object-cover">
-                <img className="w-full" src={src} alt="" />
+            <div className="w-full">
+                <img
+                    className="w-full mb-4 object-cover max-h-[150px]"
+                    src={src}
+                    alt=""
+                />
             </div>
             <div className="px-4 mb-4">
                 <h3 className="font-semibold mb-2">{title}</h3>
