@@ -117,7 +117,7 @@ export const Registry = () => {
                 <div className="flex justify-end gap-4">
                     {id && (
                         <button
-                            className="px-8 py-2 outline-none rounded-full border-[1px] text-red-600 border-red-600 hover:bg-red-600 hover:text-white transition ease-linear"
+                            className="rounded-full border-[1px] border-red-600 px-8 py-2 text-red-600 outline-none transition ease-linear hover:bg-red-600 hover:text-white"
                             type="submit"
                             onClick={() => dispatch(deleteItem(id))}
                         >
@@ -125,7 +125,7 @@ export const Registry = () => {
                         </button>
                     )}
                     <button
-                        className="px-8 py-2 outline-none rounded-full border-[1px] border-black hover:bg-black hover:text-white transition ease-linear"
+                        className="rounded-full border-[1px] border-black px-8 py-2 outline-none transition ease-linear hover:bg-black hover:text-white"
                         type="submit"
                     >
                         {id ? 'Atualizar' : 'Enviar'}

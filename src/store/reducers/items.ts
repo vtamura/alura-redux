@@ -21,17 +21,9 @@ const itemsSlice = createSlice({
             ...state,
             { ...payload, id: uuid(), favorite: false },
         ],
-        updateItem: (state, { payload }: { payload: IItem }): IItem[] => {
-            return state.map((item) => {
-                if (item.id === payload.id) {
-                    for (let [key, value] of Object.entries(payload)) {
-                        if (value) {
-                            item = { ...item, [key]: value }
-                        }
-                    }
-                }
-                return item
-            })
+        updateItem: (state, { payload }: { payload: IItem }): void => {
+            const index = state.findIndex((item) => item.id === payload.id)
+            Object.assign(state[index], payload)
         },
         deleteItem: (state, { payload }: { payload: string }): IItem[] => {
             return state.filter((item) => item.id !== payload)
