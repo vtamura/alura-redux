@@ -59,7 +59,7 @@ export const Home = () => {
                     </p>
                     <button
                         className="py-2 px-4 bg-transparent hover:bg-gray-200 text-gray-200 hover:text-[#1a1a1a] border-gray-200 border-[1px] rounded-full max-w-[150px] transition ease-linear"
-                        onClick={() => navigate('/advertisement')}
+                        onClick={() => navigate('/registry')}
                     >
                         Conferir
                     </button>

@@ -63,7 +63,7 @@ export const Cart = () => {
                     </p>
                     <button
                         type="button"
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        className="hover:bg-black hover:text-white text-black py-2 px-4 rounded-full border-[1px] border-black transition ease-in"
                         onClick={handleClick}
                     >
                         Comprar

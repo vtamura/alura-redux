@@ -1,11 +1,12 @@
 import { FaCartPlus } from 'react-icons/fa'
-import { RiHeart2Fill, RiHeartLine } from 'react-icons/ri'
+import { RiHeart2Fill, RiHeartLine, RiEditFill } from 'react-icons/ri'
 import items from '../../../mocks/items'
 import { useDispatch, useSelector } from 'react-redux'
 import { setFavorite } from '../../../store/reducers/items'
 import { addToCart } from '../../../store/reducers/cart'
 import { RootState } from '../../../store'
 import currencyConverter from '../../../utils/currencyConverter'
+import { useNavigate } from 'react-router-dom'
 
 type ItemProps = typeof items[0]
 
@@ -25,8 +26,7 @@ export const Item = ({
     favorite,
 }: ItemProps) => {
     const dispatch = useDispatch()
-    const handleFavorite = () => dispatch(setFavorite(id))
-    const handleCart = () => dispatch(addToCart(id))
+    const navigate = useNavigate()
     const isInCart = useSelector<RootState>((state) =>
         state.cart.some((item) => item.id === id)
     )
@@ -56,7 +56,7 @@ export const Item = ({
                 <div className="flex items-center h-full">
                     <div
                         className="h-full grid items-center px-3 hover:bg-gray-100 transition ease-in cursor-pointer"
-                        onClick={(e) => handleFavorite()}
+                        onClick={(e) => dispatch(setFavorite(id))}
                     >
                         {favorite ? (
                             <RiHeart2Fill {...iconProps('#ff4444')} />
@@ -66,11 +66,17 @@ export const Item = ({
                     </div>
                     <div
                         className="h-full grid items-center px-3 hover:bg-gray-100 transition ease-in cursor-pointer"
-                        onClick={(e) => handleCart()}
+                        onClick={(e) => dispatch(addToCart(id))}
                     >
                         <FaCartPlus
                             {...iconProps(isInCart ? '#32c256' : '#707070')}
                         />
+                    </div>
+                    <div
+                        className="h-full grid items-center px-3 hover:bg-gray-100 transition ease-in cursor-pointer"
+                        onClick={(e) => navigate(`/registry/${id}`)}
+                    >
+                        <RiEditFill {...iconProps('#707070')} />
                     </div>
                 </div>
             </div>
